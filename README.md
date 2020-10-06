@@ -268,9 +268,11 @@ $./wizard.py create my_plugin
 $./wizard.py create myplugin -cb ?
 (to create a plugin with all callbacks)
 $./wizard.py create myplugin -cb ra_start ra_stop ra_idle interrupt memory_read memory_write state_change exception syscall syscall_exit command breakpoint instructions
+$./wizard.py create pythonPlugin -i python
 ```
 
 In order to install a plugin, compile the code into a .so or .pyc file, and then copy that file into ~/.qemuplugins.
+If plugin was created using wizard, a Makefile is established. Simply running build.sh in shoggoth-extras root directory will build the plugin and copy it to the ~/.qemuplugins folder.
 
 Callbacks perform the following...
 
